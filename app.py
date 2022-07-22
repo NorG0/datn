@@ -128,9 +128,9 @@ elif choice == "Login":
                             fig = px.pie(data, values='KhoChiu', names='name')
                             st.plotly_chart(fig, use_container_width=True)
                         
-                elif task == "Manage":
-                    if st.button("Run Model"):
-                        st.info("Model is running")
+                # elif task == "Manage":
+                #     if st.button("Run Model"):
+                #         st.info("Model is running")
                         
                 elif task == "Profiles":
                     st.subheader("User Profiles")
