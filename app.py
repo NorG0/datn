@@ -1,4 +1,4 @@
-
+import subprocess
 
 import streamlit as st
 import pandas as pd
@@ -7,6 +7,14 @@ import plotly.express as px
 from PIL import Image
 
 
+
+# run python
+def transform():
+        cmd = 'python TransformData.py'
+        p = subprocess.Popen(cmd, shell=True)
+def model():
+        cmd = 'python Model_Estimation.py'
+        p = subprocess.Popen(cmd, shell=True)
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
@@ -83,7 +91,12 @@ elif choice == "Login":
             # st.write('Ca làm việc: ',new_time)
             st.image(image)
             
-
+            if task == "Manage":
+                if st.button("Run Model"):
+                        model()
+                if st.button("Transform"):
+                    transform()
+                    
             if username == "admin":	
                 if task == "Dashboard":
                     st.subheader("Báo Cáo Hôm Nay")
@@ -128,9 +141,7 @@ elif choice == "Login":
                             fig = px.pie(data, values='KhoChiu', names='name')
                             st.plotly_chart(fig, use_container_width=True)
                         
-                # elif task == "Manage":
-                #     if st.button("Run Model"):
-                #         st.info("Model is running")
+                
                         
                 elif task == "Profiles":
                     st.subheader("User Profiles")
