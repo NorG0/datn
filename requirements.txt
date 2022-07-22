@@ -1,0 +1,11 @@
+numpy==1.22.3
+opencv-python==4.5.5.64
+pandas
+plotly
+requests
+streamlit==1.9.0
+Pillow
+mediapipe
+sklearn
+
+
