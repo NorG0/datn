@@ -52,9 +52,13 @@ model
 # In[8]:
 
 
-user = open('user.txt',"r")
-user=user.read()
-user
+# user = open('user.txt',"r")
+user= 'long'
+# user
+
+# with open ('user.csv', mode = 'a', newline='') as f:
+#                         csv_writer=csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#                         csv_writer.writerow(body_language_class_list)
 
 
 # In[9]:
