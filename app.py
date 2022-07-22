@@ -74,8 +74,8 @@ elif choice == "Login":
         result = login_user(username,check_hashes(password,hashed_pswd))
         if result:
             st.success("Logged In as {}".format(username))
-            with open ('user.csv', mode = 'w', newline='') as f:
-                        csv_writer=csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            file = open ('user.txt','w')
+            file.write(username)
             task = st.selectbox("Task",["Dashboard","Profiles","Manage"])
             image = Image.open('male.jpg')
             # st.write('Tên nhân viên: ',new_name)
